@@ -1,6 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Hero.css";
+import image1 from "../assets/images/sleepwear1.png"
+import image2 from "../assets/images/sleepwear2.png"
+import image3 from "../assets/images/sleepwear3.jpg"
 
 function HeroComponent() {
   return (
@@ -16,7 +19,7 @@ function HeroComponent() {
         <div className="carousel-inner">
 
           <div className="carousel-item active" data-bs-interval="3000">
-            <img src="../public/images/sleepwear1.png" className="d-block w-100 hero-img" alt="Luxury Sleepwear 1" />
+            <img src={image1} className="d-block w-100 hero-img" alt="Luxury Sleepwear 1" />
             <div className="carousel-caption d-flex flex-column justify-content-center align-items-start">
               <h1 className="display-4 fw-bold">Luxury Comfort</h1>
               <p className="lead">Soft, breathable, and made for dreamy nights.</p>
@@ -25,7 +28,7 @@ function HeroComponent() {
           </div>
 
           <div className="carousel-item" data-bs-interval="3000">
-            <img src="../public/images/sleepwear2.png" className="d-block w-100 hero-img" alt="Luxury Sleepwear 2" />
+            <img src={image2} className="d-block w-100 hero-img" alt="Luxury Sleepwear 2" />
             <div className="carousel-caption d-flex flex-column justify-content-center align-items-start">
               <h1 className="display-4 fw-bold">Dreamy Elegance</h1>
               <p className="lead">Experience premium fabric designed for true relaxation.</p>
@@ -34,7 +37,7 @@ function HeroComponent() {
           </div>
 
           <div className="carousel-item" data-bs-interval="3000">
-            <img src="../public/images/sleepwear3.jpg" className="d-block w-100 hero-img" alt="Luxury Sleepwear 3" />
+            <img src={image3} className="d-block w-100 hero-img" alt="Luxury Sleepwear 3" />
             <div className="carousel-caption d-flex flex-column justify-content-center align-items-start">
               <h1 className="display-4 fw-bold">Sleep in Style</h1>
               <p className="lead">Timeless designs for peaceful nights and cozy mornings.</p>
