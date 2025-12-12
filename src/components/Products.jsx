@@ -1,0 +1,35 @@
+import React from "react";
+import { OurProducts } from "./products";
+
+const Products = () => {
+    return (
+        <div className="container products-section text-center py-5">
+            <h2>Our Products</h2>
+            <p>Explore our wide range of products.</p>
+
+            <div className="row">
+                {OurProducts.map((product)=> (<div className="col-md-4" key={product.id}>
+                    <div className="card mb-4 shadow rounded-5 w-75 mx-auto" style={{height:"500px"}}>
+                        <div className="rounded-top-5 overflow-hidden">
+                            <img src={product.image} className="card-img-top img-fluid" alt={product.name} style={{height:"350px", objectFit:"cover"}}/>
+                        </div>
+                        <div className="card-body pb-4">
+                            <h5 className="card-title">{product.name}</h5>
+                            <span className="price"><strong>${product.price}</strong></span>
+                            <div className="d-flex justify-content-between align-items-center mt-3">
+                                <button className="addtocartbtn bg-black btn text-white">Add to cart</button>
+                                <button className="checkoutbtn btn float-end">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>))}
+            </div>
+            <div className="my-4">
+                <button className="btn bg-theme px-4">View All Products</button>
+            </div>
+
+        </div>     
+
+    );
+}
+export default Products;

@@ -1,0 +1,107 @@
+.newarrivals {
+    background-color: rgb(247, 0, 255);
+}   
+.new-arrivals{
+    height: 500px;
+    object-fit: cover;
+}
+.new-arrivals img {
+    height: 100%;
+}
+.new-arrivals h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.new-arrivals p {
+    font-size: 20px;
+    color: white;
+}
+.new-arrivals button {
+    padding: 10px 27px !important;
+    font-size: 20px;
+    color: black !important;
+    background-color: white !important;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out !important;
+}
+.new-arrivals button:hover {
+    background-color: palevioletred !important;
+}
+.checkoutbtn{
+    background-color: palevioletred !important;
+}
+.checkoutbtn:hover{
+    color: white !important;
+}
+.addtocartbtn{
+    transition: all 0.3s ease-in-out !important;
+}
+.addtocartbtn:hover{
+    background-color: pink !important;
+
+}
+.products-section h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+.products-section p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.products-section .card{
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+.products-section .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.products-section .card img{
+    height: 500px !important;
+    object-fit: cover;
+}
+.newsletterinput{
+    outline: none !important;
+
+}
+.newsletterinput:focus{
+    border-color: palevioletred !important;
+    box-shadow: 0 0 5px palevioletred !important;
+}
+.newsletter h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+.newsletter p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.newsletter button{
+    padding: 10px 27px !important;
+    font-size: 20px;
+    color: black !important;
+    background-color: palevioletred !important;
+    border: none;
+    transition: background-color 0.3s ease-in-out !important;
+}
+.testimonial h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+.testimonial p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 500px){
+    .new-arrivals {
+    height: 700px !important;
+    object-fit: cover;
+}
+    .newarrivalsimg{
+        height: 300px !important;
+    }
+}

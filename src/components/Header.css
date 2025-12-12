@@ -1,0 +1,49 @@
+.active{
+    font-weight: bolder !important;
+    color: palevioletred !important;
+}
+.active::after, .nav-link::after,.nav-link:hover::after
+{
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background-color: palevioletred;
+    margin-top: 4px;
+    border-radius: 2px;
+}
+.nav-link::after{   
+    transition: width 0.3s ease-in-out !important;
+    width: 0;
+}
+.nav-link:hover{
+    color: palevioletred !important;
+}
+.bg-theme{
+    background-color: palevioletred !important;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;  
+  background: white;
+}
+
+@media (max-width: 500px){
+    .getStartedbtn{
+        font-size: 10px !important;
+    }
+    .new-arrivals {
+    height: 1000px !important;
+    object-fit: cover;
+}
+}
+
+@media (max-width: 360px){
+    .getStartedbtn{
+        display: none !important;
+    }
+    .new-arrivals h2{
+        font-size: 30px !important;
+}
+}
