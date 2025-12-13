@@ -37,9 +37,18 @@ header {
     height: 1000px !important;
     object-fit: cover;
 }
+.Brandname h2{
+    font-size: 20px;
+}
+.Brandname p{
+    font-size: 15px;
+}
+.getStartedbtn{
+        padding-inline: 0px !important;
+    }
 }
 
-@media (max-width: 360px){
+@media (max-width: 400px){
     .getStartedbtn{
         display: none !important;
     }

@@ -18,14 +18,13 @@ function App() {
 
   return (
     <>
-      <div className='header'>
         <Header darkMode={darkMode} toggleTheme={toggleTheme}>
         </Header>
         <Routes>
           <Route path='/products&services' element={<AllProducts darkMode={darkMode} toggleTheme={toggleTheme}></AllProducts>} />
           <Route path='/home' element={<Home darkMode={darkMode} toggleTheme={toggleTheme}></Home>} />
         </Routes>
-      </div>
+        <Footer darkMode={darkMode} toggleTheme={toggleTheme} />
     </>
   );
 };

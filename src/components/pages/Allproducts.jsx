@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { allProducts } from "../Allproducts";
 import "./Allproducts.css"
 import { productCategory } from "../productData";
 
@@ -30,7 +29,7 @@ const AllProducts = ({ darkMode }) => {
         <section className={darkMode ? " bg-dark text-white" : " bg-white text-dark"}>
                 <div className="row">
                     {/* LEFT SIDEBAR */}
-                    <div className="col-md-2 border p-3 text-start">
+                    <div className="col-md-2 border p-3 text-start" style={{height:"fit-content"}}>
                         <button
                             onClick={toggleDropdown}
                             className="allprodBtn text-start btn w-100"

@@ -3,6 +3,7 @@ import "./Header.css";
 import Brandwhite from "./Brandwhite.jsx";
 import Mode from "./Mode.jsx";
 import { Container } from "react-bootstrap";
+import MobileNav from "./MobileNav.jsx";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
@@ -17,7 +18,7 @@ function Header({ darkMode, toggleTheme }) {
             className="px-5"
         >
             <Container fluid>
-                <div className={darkMode ? "text-white me-3" : "text-dark me-3"}><h2 className="m-0 fw-bold">Dreams</h2>
+                <div className={darkMode ? "Brandname text-white me-3" : "Brandname text-dark me-3"}><h2 className="m-0 fw-bold">Dreams</h2>
                     <p>by <strong>Ezinne</strong></p>
                 </div>
 
@@ -49,7 +50,7 @@ function Header({ darkMode, toggleTheme }) {
                     <Mode darkMode={darkMode} toggleTheme={toggleTheme} />
 
                     {/* Mobile menu */}
-                    <Nav darkMode={darkMode} toggleTheme={toggleTheme} />
+                    <MobileNav darkMode={darkMode} toggleTheme={toggleTheme} />
                 </div>
             </Container>
         </Navbar>

@@ -6,7 +6,6 @@ function Home({darkMode, toggleTheme}) {
     return (
         <div>
             <Body darkMode={darkMode} toggleTheme={toggleTheme} />
-            <Footer darkMode={darkMode} toggleTheme={toggleTheme} />
         </div>
     )
 }
