@@ -29,10 +29,10 @@ const AllProducts = ({ darkMode }) => {
         <section className={darkMode ? " bg-dark text-white" : " bg-white text-dark"}>
                 <div className="row">
                     {/* LEFT SIDEBAR */}
-                    <div className="col-md-2 border p-3 text-start" style={{height:"fit-content"}}>
+                    <div className={"col-md-2 border p-3 text-start"} style={{height:"fit-content"}}>
                         <button
                             onClick={toggleDropdown}
-                            className="allprodBtn text-start btn w-100"
+                            className={darkMode ? "allprodBtn text-start btn w-100 text-white": "allprodBtn text-start btn w-100 text-dark"}
                         >
                             All Categories{" "}
                             <i
@@ -44,7 +44,7 @@ const AllProducts = ({ darkMode }) => {
                         {isOpen && (
                             <div className="mt-2">
                                 <button
-                                    className="allprodBtn text-start btn w-100"
+                                    className={darkMode ? 'allprodBtn text-white text-start btn w-100 ' : 'allprodBtn text-dark text-start btn w-100 '}
                                     onClick={() => handleCategoryClick("All")}
                                 >
                                     All Products
@@ -53,7 +53,7 @@ const AllProducts = ({ darkMode }) => {
                                 {Object.keys(productCategory).map((category) => (
                                     <button
                                         key={category}
-                                        className="allprodBtn text-start btn w-100"
+                                        className={darkMode ? " text-white allprodBtn text-start btn w-100" : "text-dark allprodBtn text-start btn w-100"}
                                         onClick={() => handleCategoryClick(category)}
                                     >
                                         {category}
