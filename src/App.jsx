@@ -4,7 +4,7 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/pages/Home.jsx";
-import AllProducts from "./components/pages/AllProducts.jsx";
+import AllProducts from "./components/pages/Allproducts.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
