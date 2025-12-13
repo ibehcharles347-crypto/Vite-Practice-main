@@ -26,10 +26,21 @@ function Footer({darkMode}) {
                     </div>
                     <div className="col-md-3">
                         <h6>Quick Links</h6>
-                        <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Home</a>
-                        <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>About</a>
-                        <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Services</a>
-                        <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block"}>Contact</a>
+                        <div className="row">
+                            <div className="col-6">
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Home</a>
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>About</a>
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Products & Services</a>
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block"}>Contact</a>
+                            </div>
+                            <div className="col-6">
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Account</a>
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Checkout</a>
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Login</a>
+                                <a href="#" className={darkMode ? "text-white d-block mb-1" : "text-dark d-block mb-1"}>Shopping</a>
+                                <a href="#" className={darkMode ? "text-white d-block " : "text-dark d-block"}>Register</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p className="mb-0">&copy; 2024 Your Company. All rights reserved.</p>

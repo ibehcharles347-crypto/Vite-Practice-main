@@ -2,41 +2,58 @@ import React, { useState } from "react";
 import "./Header.css";
 import Brandwhite from "./Brandwhite.jsx";
 import Mode from "./Mode.jsx";
-import Nav from "./Nav.jsx"
+import { Container } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
+import Button from "react-bootstrap/Button";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 function Header({ darkMode, toggleTheme }) {
     return (
-        <>
-            <header id="header" className={darkMode ? "bg-dark text-white " : "bg-light text-dark"}>
-                <nav className="container-fluid d-flex justify-content-between align-items-center px-5">
-                    <Brandwhite />
+        <Navbar
+            expand="lg"
+            bg={darkMode ? "dark" : "light"}
+            variant={darkMode ? "dark" : "light"}
+            className="px-5"
+        >
+            <Container fluid>
+                <div className={darkMode ? "text-white me-3" : "text-dark me-3"}><h2 className="m-0 fw-bold">Dreams</h2>
+                    <p>by <strong>Ezinne</strong></p>
+                </div>
 
-                    <ul className="nav d-none d-lg-flex">
-                        <li className="nav-item">
-                            <a href="#" className={darkMode ? "nav-link  active" : "nav-link active"}>Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#" className={darkMode ? "nav-link text-white" : "nav-link text-dark"}>About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#" className={darkMode ? "nav-link text-white" : "nav-link text-dark"}>Services</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#" className={darkMode ? "nav-link text-white" : "nav-link text-dark"}>Contact</a>
-                        </li>
-                    </ul>
-                    
-                    <div className="d-flex justify-content-between align-items-center gap-3"><button className="getStartedbtn btn bg-theme px-4">Get Started</button>
-                    <Mode darkMode={darkMode} toggleTheme={toggleTheme} ></Mode>
-                    <Nav darkMode={darkMode} toggleTheme={toggleTheme}></Nav>
-                    </div>
+                {/* Desktop Nav */}
+                <Nav className="d-none d-lg-flex">
+                    <Nav.Link as={Link} to="/home">
+                        Home
+                    </Nav.Link>
 
+                    <Nav.Link as={Link} to="/about">
+                        About
+                    </Nav.Link>
 
-                </nav>
-            </header>
+                    <Nav.Link as={Link} to="/products&services">
+                        Products & Services
+                    </Nav.Link>
 
-        </>
+                    <Nav.Link as={Link} to="/contact">
+                        Contact
+                    </Nav.Link>
+                </Nav>
+
+                {/* Right side */}
+                <div className="d-flex align-items-center gap-3">
+                    <Button className="getStartedbtn bg-theme px-4">
+                        Get Started
+                    </Button>
+
+                    <Mode darkMode={darkMode} toggleTheme={toggleTheme} />
+
+                    {/* Mobile menu */}
+                    <Nav darkMode={darkMode} toggleTheme={toggleTheme} />
+                </div>
+            </Container>
+        </Navbar>
     );
-};
+}
 
 export default Header;

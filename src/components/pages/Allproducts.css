@@ -1,0 +1,9 @@
+.allprodBtn:hover{
+    border: 1px solid black !important;
+}
+.allprodBtn{
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import Header from './components/Header.jsx';
 import Body from './components/Body.jsx';
 import Footer from './components/Footer.jsx';
-
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home.jsx';
+import AllProducts from './components/pages/Allproducts.jsx';
 
 
 function App() {
@@ -17,11 +19,13 @@ function App() {
   return (
     <>
       <div className='header'>
-      <Header darkMode={darkMode} toggleTheme={toggleTheme}>
-      </Header>
+        <Header darkMode={darkMode} toggleTheme={toggleTheme}>
+        </Header>
+        <Routes>
+          <Route path='/products&services' element={<AllProducts darkMode={darkMode} toggleTheme={toggleTheme}></AllProducts>} />
+          <Route path='/home' element={<Home darkMode={darkMode} toggleTheme={toggleTheme}></Home>} />
+        </Routes>
       </div>
-      <Body darkMode={darkMode} toggleTheme={toggleTheme}/>
-      <Footer darkMode={darkMode} toggleTheme={toggleTheme}/>
     </>
   );
 };
