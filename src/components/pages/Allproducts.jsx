@@ -36,12 +36,12 @@ const AllProducts = ({ darkMode }) => {
         <section className={darkMode ? " bg-dark text-white" : " bg-white text-dark"}>
                 <div className="row">
                     {/* LEFT SIDEBAR */}
-                    <div className={"col-md-2 border p-3 text-start d-flex flex-column justify-content-between"} style={{height:"87vh", position:"sticky", top:"100px"
+                    <div className={"leftsidebar col-md-2 border p-3 text-start d-flex flex-column justify-content-between"} style={{height:"87vh", position:"sticky", top:"100px", zIndex:"999"
                     }}>
                         <div>
                         <button
                             onClick={toggleDropdown}
-                            className={darkMode ? "allprodBtn text-start btn w-100 text-white": "allprodBtn text-start btn w-100 text-dark"} style={{zIndex:"999"}}
+                            className={darkMode ? "allprodBtn text-start btn w-100 text-white": "allprodBtn text-start btn w-100 text-dark"}
                         >
                             All Categories{" "}
                             <i
@@ -71,7 +71,7 @@ const AllProducts = ({ darkMode }) => {
                             </div>
                         )}
                         </div>
-                        <div className="text-center bg-danger d-sm-none" style={{height:"15rem"}}>
+                        <div className="text-center bg-danger d-none d-lg-block" style={{height:"15rem"}}>
                             <div className="text-center pt-4"><h1>30% Off <p>sales</p></h1>
                             <h3>Coming Up this Friday</h3>
                             <p><span className="text-primary text-decoration-underline" onClick={()=> navigate("/newsletter")}>Subscribe</span> to our newsletter for more updates like this</p></div>
