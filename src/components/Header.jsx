@@ -15,7 +15,7 @@ function Header({ darkMode, toggleTheme }) {
             expand="lg"
             bg={darkMode ? "dark" : "light"}
             variant={darkMode ? "dark" : "light"}
-            className="px-5"
+            className="px-5" style={{position:"sticky", top:"0", zIndex:"999"}}
         >
             <Container fluid>
                 <div className={darkMode ? "Brandname text-white me-3" : "Brandname text-dark me-3"}><h2 className="m-0 fw-bold">Dreams</h2>
@@ -38,6 +38,10 @@ function Header({ darkMode, toggleTheme }) {
 
                     <Nav.Link as={Link} to="/contact">
                         Contact
+                    </Nav.Link>
+
+                    <Nav.Link as={Link} to="/cart">
+                        Cart
                     </Nav.Link>
                 </Nav>
 

@@ -7,11 +7,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter as Router} from 'react-router-dom';
 // import "./i18n/i18n"; 
+import { CartProvider } from './context/CartContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </Router>
   </StrictMode>,
 )

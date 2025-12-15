@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./Allproducts.css"
 import { productCategory } from "../productData";
+import { useCart } from "../../context/CartContext";
+import { useNavigate } from "react-router-dom";
+
+
 
 const AllProducts = ({ darkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("All");
+    const { addToCart } = useCart();
+    const navigate = useNavigate();
+
 
     // toggle dropdown
     const toggleDropdown = () => {
@@ -29,7 +36,9 @@ const AllProducts = ({ darkMode }) => {
         <section className={darkMode ? " bg-dark text-white" : " bg-white text-dark"}>
                 <div className="row">
                     {/* LEFT SIDEBAR */}
-                    <div className={"col-md-2 border p-3 text-start"} style={{height:"fit-content"}}>
+                    <div className={"col-md-2 border p-3 text-start d-flex flex-column justify-content-between"} style={{height:"87vh", position:"sticky", top:"100px"
+                    }}>
+                        <div>
                         <button
                             onClick={toggleDropdown}
                             className={darkMode ? "allprodBtn text-start btn w-100 text-white": "allprodBtn text-start btn w-100 text-dark"}
@@ -61,6 +70,12 @@ const AllProducts = ({ darkMode }) => {
                                 ))}
                             </div>
                         )}
+                        </div>
+                        <div className="text-center bg-danger" style={{height:"15rem"}}>
+                            <div className="text-center pt-4"><h1>30% Off <p>sales</p></h1>
+                            <h3>Coming Up this Friday</h3>
+                            <p><span className="text-primary text-decoration-underline" onClick={()=> navigate("/newsletter")}>Subscribe</span> to our newsletter for more updates like this</p></div>
+                        </div>
                     </div>
 
                     {/* PRODUCTS SECTION */}
@@ -97,10 +112,10 @@ const AllProducts = ({ darkMode }) => {
                                             </span>
 
                                             <div className="d-flex justify-content-between align-items-center mt-3">
-                                                <button className="addtocartbtn bg-black btn text-white">
+                                                <button className="addtocartbtn bg-black btn text-white" onClick={() => addToCart(product)}>
                                                     Add to cart
                                                 </button>
-                                                <button className="checkoutbtn btn">Buy Now</button>
+                                                <button className="checkoutbtn btn" onClick={() => {addToCart(product), navigate("/cart")} }>Buy Now</button>
                                             </div>
                                         </div>
                                     </div>
