@@ -13,7 +13,7 @@ const Products = () => {
             <p>Explore our wide range of products.</p>
 
             <div className="row">
-                {OurProducts.map((product)=> (<div className="col-md-4" key={product.id}>
+                {OurProducts.map((product)=> (<div className="col-md-6 col-lg-4" key={product.id}>
                     <div className="card mb-4 shadow rounded-5 w-75 mx-auto" style={{height:"500px"}}>
                         <div className="rounded-top-5 overflow-hidden">
                             <img src={product.image} className="card-img-top img-fluid" alt={product.name} style={{height:"350px", objectFit:"cover"}}/>

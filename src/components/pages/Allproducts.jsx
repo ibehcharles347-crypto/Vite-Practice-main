@@ -36,7 +36,7 @@ const AllProducts = ({ darkMode }) => {
         <section className={darkMode ? " bg-dark text-white" : " bg-white text-dark"}>
                 <div className="row">
                     {/* LEFT SIDEBAR */}
-                    <div className={"leftsidebar col-md-2 border p-3 text-start d-flex flex-column justify-content-between"} style={{height:"87vh", position:"sticky", top:"100px", zIndex:"999"
+                    <div className={"leftsidebar col-md-3 col-lg-2 border p-3 text-start d-flex flex-column justify-content-between"} style={{height:"87vh", position:"sticky", top:"100px", zIndex:"999"
                     }}>
                         <div>
                         <button
@@ -80,7 +80,7 @@ const AllProducts = ({ darkMode }) => {
 
                     {/* PRODUCTS SECTION */}
 
-                    <div className="col-md-10 products-section text-center py-5">
+                    <div className="col-md-9 col-lg-10 products-section text-center py-5">
                         <h2>
                             {selectedCategory === "All"
                                 ? "Our Products"
@@ -91,7 +91,7 @@ const AllProducts = ({ darkMode }) => {
                         <div className="container">        
                         <div className="row">
                             {displayedProducts.map((product) => (
-                                <div className="px-5 col-md-4" key={product.id}>
+                                <div className="px-4 col-md-6 col-lg-4" key={product.id}>
                                     <div
                                         className="card mb-4 shadow rounded-5 mx-auto"
                                         style={{ height: "500px" }}

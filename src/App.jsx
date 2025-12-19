@@ -23,17 +23,14 @@ function App() {
       <Header darkMode={darkMode} toggleTheme={toggleTheme} />
 
       <Routes>
-        {/* Home */}
         <Route path="/" element={<Home darkMode={darkMode} />} />
         <Route path="/home" element={<Home darkMode={darkMode} />} />
 
-        {/* Products */}
         <Route
           path="/products&services"
           element={<AllProducts darkMode={darkMode} />}
         />
 
-        {/* Cart */}
         <Route
           path="/cart"
           element={<Cart darkMode={darkMode} />}
@@ -43,7 +40,7 @@ function App() {
         <Route path="/success" element={<Success />} />
         <Route path="/newsletter" element={<Newsletter></Newsletter>} />
 
-        {/* Fallback */}
+        
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
