@@ -30,7 +30,7 @@ const Products = () => {
                 </div>))}
             </div>
             <div className="my-4">
-                <button className="btn bg-theme px-4">View All Products</button>
+                <button className="btn bg-theme px-4" onClick={()=>{navigate("/products&services")}}>View All Products</button>
             </div>
 
         </div>     
