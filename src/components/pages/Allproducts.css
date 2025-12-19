@@ -8,6 +8,10 @@
     align-items: center;
 }
 
+.prod-img{
+    width: 100%;
+}
+
 @media (max-width : 600px){
     .leftsidebar{
         height: fit-content !important;

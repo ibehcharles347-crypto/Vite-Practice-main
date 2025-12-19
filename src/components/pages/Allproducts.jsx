@@ -94,19 +94,19 @@ const AllProducts = ({ darkMode }) => {
                                 <div className="px-4 col-md-6 col-lg-4" key={product.id}>
                                     <div
                                         className="card mb-4 shadow rounded-5 mx-auto"
-                                        style={{ height: "500px" }}
                                     >
-                                        <div className="rounded-top-5 overflow-hidden">
+                                        <div className="rounded-top-5" 
+                                        >
                                             <img
                                                 src={product.image}
-                                                className="card-img-top img-fluid"
+                                                className="img-fluid prod-img"
                                                 alt={product.name}
-                                                style={{ height: "" }}
                                             />
                                         </div>
 
                                         <div className="card-body pb-4">
                                             <h5 className="card-title">{product.name}</h5>
+                                            <p className="">{product.description}</p>
                                             <span className="price">
                                                 <strong>${product.price}</strong>
                                             </span>
