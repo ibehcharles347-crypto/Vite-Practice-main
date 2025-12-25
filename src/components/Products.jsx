@@ -13,27 +13,33 @@ const Products = () => {
             <p>Explore our wide range of products.</p>
 
             <div className="row">
-                {OurProducts.map((product)=> (<div className="col-md-6 col-lg-4" key={product.id}>
-                    <div className="card mb-4 shadow rounded-5 w-75 mx-auto" style={{height:"500px"}}>
-                        <div className="rounded-top-5 overflow-hidden">
-                            <img src={product.image} className="card-img-top img-fluid" alt={product.name} style={{height:"350px", objectFit:"cover"}}/>
+                {OurProducts.map((product) => (<div className="px-5 col-md-6 col-lg-4" key={product.id}>
+                    <div className="card mb-4 shadow rounded-5 mx-auto">
+                        <div className=""
+                        >
+                            <img
+                                src={product.image}
+                                className="rounded-top-5 img-fluid prod-img"
+                                alt={product.name}
+                            />
                         </div>
-                        <div className="card-body pb-4">
+                        <div className="card-body pb-4 prod-body">
                             <h5 className="card-title">{product.name}</h5>
+                            <p className="">{product.description}</p>
                             <span className="price"><strong>${product.price}</strong></span>
                             <div className="d-flex justify-content-between align-items-center mt-3">
-                                <button onClick={()=>{addToCart(product)}} className="addtocartbtn bg-black btn text-white">Add to cart</button>
-                                <button onClick={()=>{addToCart(product), navigate("/cart")}} className="checkoutbtn btn float-end">Buy Now</button>
+                                <button onClick={() => { addToCart(product) }} className="addtocartbtn bg-black btn text-white">Add to cart</button>
+                                <button onClick={() => { addToCart(product), navigate("/cart") }} className="checkoutbtn btn float-end">Buy Now</button>
                             </div>
                         </div>
                     </div>
                 </div>))}
             </div>
             <div className="my-4">
-                <button className="btn bg-theme px-4" onClick={()=>{navigate("/products&services")}}>View All Products</button>
+                <button className="btn bg-theme px-4" onClick={() => { navigate("/products&services") }}>View All Products</button>
             </div>
 
-        </div>     
+        </div>
 
     );
 }

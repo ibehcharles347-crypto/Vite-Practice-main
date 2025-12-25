@@ -21,7 +21,6 @@ const AllProducts = ({ darkMode }) => {
     // handle category click
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
-        setIsOpen(false); // close dropdown after click
     };
 
     // flatten products OR filter by category
@@ -71,7 +70,7 @@ const AllProducts = ({ darkMode }) => {
                             </div>
                         )}
                         </div>
-                        <div className="text-center bg-danger d-none d-lg-block" style={{height:"15rem"}}>
+                        <div className="text-center bg-danger d-none d-lg-block" style={{height:"18rem"}}>
                             <div className="text-center pt-4"><h1>30% Off <p>sales</p></h1>
                             <h3>Coming Up this Friday</h3>
                             <p><span className="text-primary text-decoration-underline" onClick={()=> navigate("/newsletter")}>Subscribe</span> to our newsletter for more updates like this</p></div>
@@ -91,20 +90,20 @@ const AllProducts = ({ darkMode }) => {
                         <div className="container">        
                         <div className="row">
                             {displayedProducts.map((product) => (
-                                <div className="px-4 col-md-6 col-lg-4" key={product.id}>
+                                <div className="px-5 col-md-6 col-lg-4" key={product.id}>
                                     <div
                                         className="card mb-4 shadow rounded-5 mx-auto"
                                     >
-                                        <div className="rounded-top-5" 
+                                        <div className=""  
                                         >
                                             <img
                                                 src={product.image}
-                                                className="img-fluid prod-img"
+                                                className="rounded-top-5 img-fluid prod-img"
                                                 alt={product.name}
                                             />
                                         </div>
 
-                                        <div className="card-body pb-4">
+                                        <div className="card-body pb-4 prod-body">
                                             <h5 className="card-title">{product.name}</h5>
                                             <p className="">{product.description}</p>
                                             <span className="price">
