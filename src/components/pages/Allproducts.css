@@ -1,26 +1,87 @@
-.allprodBtn:hover{
+/* =========================
+   SIDEBAR ANIMATION
+========================= */
+.category-collapse {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.category-collapse.open {
+    max-height: 500px;
+    /* enough for categories */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   PROMO BOX
+========================= */
+.promo-box {
+    height: 15rem;
+    background-color: #dc3545;
+    border-radius: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   PRODUCT IMAGE ASPECT RATIO
+========================= */
+.product-image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* 👈 perfect for ecommerce */
+    overflow: hidden;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background: #f8f9fa;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔥 no stretching */
+    transition: transform 0.4s ease;
+}
+
+/* subtle hover zoom */
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.allprodBtn:hover {
     border: 1px solid black !important;
 }
-.allprodBtn{
+
+.allprodBtn {
     width: 100% !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.prod-img{
+.prod-img {
     width: 100%;
     height: 350px;
 }
-.prod-body{
+
+.prod-body {
     height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-@media (max-width : 600px){
-    .leftsidebar{
+
+@media (max-width : 600px) {
+    .leftsidebar {
         height: fit-content !important;
         background-color: white !important;
         top: 70px !important;
